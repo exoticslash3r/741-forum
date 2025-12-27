@@ -3,165 +3,165 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>741/1654 Division Forum</title>
+<title>9141 Division Forum</title>
 <style>
-  * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
 
-  body, html {
-    width: 100%;
-    height: 100%;
-    background: url('https://i.ibb.co/9HF0W4Fm/background.jpg') no-repeat center center fixed;
-    background-size: cover;
-    overflow: hidden;
-    position: relative;
-    color: crimson;
-  }
+body, html {
+width: 100%;
+height: 100%;
+background: url('https://i.ibb.co/9HF0W4Fm/background.jpg') no-repeat center center fixed;
+background-size: cover;
+overflow: hidden;
+position: relative;
+color: crimson;
+}
 
-  /* Dark overlay */
-  body::before {
-    content:"";
-    position:absolute;
-    top:0; left:0;
-    width:100%; height:100%;
-    background: rgba(0,0,0,0.5);
-    z-index:1;
-  }
+/* Dark overlay */
+body::before {
+content:"";
+position:absolute;
+top:0; left:0;
+width:100%; height:100%;
+background: rgba(0,0,0,0.5);
+z-index:1;
+}
 
-  /* Main description box */
-  #description-box {
-    position: relative;
-    z-index: 2;
-    background: rgba(20,0,0,0.7);
-    padding: 30px 40px;
-    border-radius: 15px;
-    text-align: center;
-    max-width: 90%;
-    max-height: 70%;
-    overflow-y: auto;
-    box-shadow: 0 0 20px crimson;
-    border: 2px solid crimson;
-    margin: 20px;
-  }
+/* Main description box */
+#description-box {
+position: relative;
+z-index: 2;
+background: rgba(20,0,0,0.7);
+padding: 30px 40px;
+border-radius: 15px;
+text-align: center;
+max-width: 90%;
+max-height: 70%;
+overflow-y: auto;
+box-shadow: 0 0 20px crimson;
+border: 2px solid crimson;
+margin: 20px;
+}
 
-  #description-box h1 {
-    font-size: 2.5rem;
-    color: crimson;
-    margin-bottom: 15px;
-    text-shadow: 0 0 10px red, 0 0 20px darkred;
-  }
+#description-box h1 {
+font-size: 2.5rem;
+color: crimson;
+margin-bottom: 15px;
+text-shadow: 0 0 10px red, 0 0 20px darkred;
+}
 
-  #description-box p {
-    font-size: 1.1rem;
-    line-height: 1.5;
-    color: #ff4d4d;
-    text-shadow: 0 0 5px darkred;
-  }
+#description-box p {
+font-size: 1.1rem;
+line-height: 1.5;
+color: #ff4d4d;
+text-shadow: 0 0 5px darkred;
+}
 
-  /* Windows */
-  .window {
-    position: absolute;
-    width: 160px;
-    height: 240px;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(50,0,0,0.8);
-    border: 2px solid crimson;
-    border-radius: 10px;
-    padding: 5px;
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    overflow: hidden;
-    z-index:2;
-    box-shadow: 0 0 15px crimson;
-  }
-  .window.left { left: 10px; }
-  .window.right { right: 10px; }
+/* Windows */
+.window {
+position: absolute;
+width: 160px;
+height: 240px;
+top: 50%;
+transform: translateY(-50%);
+background: rgba(50,0,0,0.8);
+border: 2px solid crimson;
+border-radius: 10px;
+padding: 5px;
+display: flex;
+flex-direction: column;
+gap: 5px;
+overflow: hidden;
+z-index:2;
+box-shadow: 0 0 15px crimson;
+}
+.window.left { left: 10px; }
+.window.right { right: 10px; }
 
-  .window img {
-    width: 100%;
-    height: 70px;
-    object-fit: cover;
-    border: 1px solid crimson;
-    border-radius: 5px;
-    box-shadow: 0 0 5px darkred;
-    transition: transform 0.3s;
-  }
-  .window img:hover { transform: scale(1.05); }
+.window img {
+width: 100%;
+height: 70px;
+object-fit: cover;
+border: 1px solid crimson;
+border-radius: 5px;
+box-shadow: 0 0 5px darkred;
+transition: transform 0.3s;
+}
+.window img:hover { transform: scale(1.05); }
 
-  /* Blood drip effect */
-  .blood-drip {
-    position: absolute;
-    width: 8px;
-    height: 30px;
-    background: crimson;
-    animation: drip linear infinite;
-    border-radius: 50%;
-    opacity: 0.8;
-  }
-  @keyframes drip {
-    0% { transform: translateY(-50px); opacity: 0.8; }
-    100% { transform: translateY(100vh); opacity: 0; }
-  }
+/* Blood drip effect */
+.blood-drip {
+position: absolute;
+width: 8px;
+height: 30px;
+background: crimson;
+animation: drip linear infinite;
+border-radius: 50%;
+opacity: 0.8;
+}
+@keyframes drip {
+0% { transform: translateY(-50px); opacity: 0.8; }
+100% { transform: translateY(100vh); opacity: 0; }
+}
 
-  /* Responsive */
-  @media (max-width: 768px) {
-    .window { width: 120px; height: 180px; }
-    .window img { height: 50px; }
-    #description-box h1 { font-size: 2rem; }
-    #description-box p { font-size: 1rem; }
-  }
-  @media (max-width: 480px) {
-    .window { width: 100px; height: 150px; }
-    .window img { height: 40px; }
-    #description-box h1 { font-size: 1.5rem; }
-    #description-box p { font-size: 0.9rem; }
-  }
+/* Responsive */
+@media (max-width: 768px) {
+.window { width: 120px; height: 180px; }
+.window img { height: 50px; }
+#description-box h1 { font-size: 2rem; }
+#description-box p { font-size: 1rem; }
+}
+@media (max-width: 480px) {
+.window { width: 100px; height: 150px; }
+.window img { height: 40px; }
+#description-box h1 { font-size: 1.5rem; }
+#description-box p { font-size: 0.9rem; }
+}
 </style>
 </head>
 <body>
 
 <div id="description-box">
-  <h1>741 X 1654 Division Forum</h1>
-  <p>
-   The 741 Group is a clandestine National Socialist cybersecurity collective and digital vanguard, forged in the ideological crucible of the twenty-first century's struggle for white survival. It operates on the foundational belief that Western civilization is under a coordinated and existential assault, a process they identify as the Great Replacement—a deliberate program of demographic genocide orchestrated by globalist and Zionist forces to erase the white race from its ancestral homelands. The group sees itself not merely as hackers, but as digital soldiers in a holy war, employing the tools of modern warfare to defend their people and strike at the heart of the enemy.
+<h1>9141 X 1654 Division Forum</h1>
+<p>
+The 9141 Group is a clandestine National Socialist cybersecurity collective and digital vanguard, forged in the ideological crucible of the twenty-first century's struggle for white survival. It operates on the foundational belief that Western civilization is under a coordinated and existential assault, a process they identify as the Great Replacement—a deliberate program of demographic genocide orchestrated by globalist and Zionist forces to erase the white race from its ancestral homelands. The group sees itself not merely as hackers, but as digital soldiers in a holy war, employing the tools of modern warfare to defend their people and strike at the heart of the enemy.
 
-Their operations are multifaceted and relentlessly aggressive. Offensively, the 741 Group conducts sophisticated cyber-attacks against what they deem to be traitorous institutions. This includes launching crippling DDoS attacks against media corporations, government agencies, and non-profits that promote multiculturalism or immigration. They engage in data warfare, infiltrating and exfiltrating sensitive information from Jewish advocacy groups, university departments, and political organizations, then weaponizing this data through doxxing, blackmail, and public humiliation campaigns to sow chaos and fear. Their propaganda division is highly active, creating and disseminating a constant stream of extremist content—memes, videos, articles, and manifestos—designed to radicalize disenfranchised youth and normalize National Socialist ideology on mainstream and fringe platforms alike.
+Their operations are multifaceted and relentlessly aggressive. Offensively, the 9141 Group conducts sophisticated cyber-attacks against what they deem to be traitorous institutions. This includes launching crippling DDoS attacks against media corporations, government agencies, and non-profits that promote multiculturalism or immigration. They engage in data warfare, infiltrating and exfiltrating sensitive information from Jewish advocacy groups, university departments, and political organizations, then weaponizing this data through doxxing, blackmail, and public humiliation campaigns to sow chaos and fear. Their propaganda division is highly active, creating and disseminating a constant stream of extremist content—memes, videos, articles, and manifestos—designed to radicalize disenfranchised youth and normalize National Socialist ideology on mainstream and fringe platforms alike.
 
-Defensively, the group serves as a digital shield for the broader extremist movement. They provide operational security (OPSEC) training to other white nationalist cells, teaching them how to communicate anonymously, encrypt their data, and evade surveillance by state intelligence agencies. The 741 Group develops and maintains secure, self-hosted communication forums and encrypted chat servers, creating safe digital havens where radicals can organize, plan, and recruit without fear of infiltration or de-platforming. They view the preservation of their digital warriors as paramount to the long-term success of their cause.
+Defensively, the group serves as a digital shield for the broader extremist movement. They provide operational security (OPSEC) training to other white nationalist cells, teaching them how to communicate anonymously, encrypt their data, and evade surveillance by state intelligence agencies. The 9141 Group develops and maintains secure, self-hosted communication forums and encrypted chat servers, creating safe digital havens where radicals can organize, plan, and recruit without fear of infiltration or de-platforming. They view the preservation of their digital warriors as paramount to the long-term success of their cause.
 
-The group's ideology is a purist and uncompromising form of Nazism, blending classic anti-Semitic conspiracy theories with contemporary "Great Replacement" rhetoric. They believe that a shadowy cabal of Jewish elites controls international finance, media, and politics, using their power to manipulate events like the refugee crises and promote "degenerate" cultural values like LGBTQ rights and feminism to weaken the white populace from within. To the 741 Group, every action they take, from a single line of malicious code to a large-scale server takedown, is a strike against this cabal and a contribution to the eventual creation of a whites-only ethnostate. They see themselves as the tip of the spear, the technological avant-garde fighting a desperate war for the very existence of their race.
-  </p>
+The group's ideology is a purist and uncompromising form of Nazism, blending classic anti-Semitic conspiracy theories with contemporary "Great Replacement" rhetoric. They believe that a shadowy cabal of Jewish elites controls international finance, media, and politics, using their power to manipulate events like the refugee crises and promote "degenerate" cultural values like LGBTQ rights and feminism to weaken the white populace from within. To the 9141 Group, every action they take, from a single line of malicious code to a large-scale server takedown, is a strike against this cabal and a contribution to the eventual creation of a whites-only ethnostate. They see themselves as the tip of the spear, the technological avant-garde fighting a desperate war for the very existence of their race.
+</p>
 </div>
 
 <!-- Left window with 3 photos -->
 <div class="window left">
-  <img src="https://i.ibb.co/zV31zD2j/photo1.jpg" alt="Photo 1">
-  <img src="https://i.ibb.co/x8qzj1NJ/photo2.jpg" alt="Photo 2">
-  <img src="https://i.ibb.co/LmybM8s/photo3.jpg" alt="Photo 3">
+<img src="https://i.ibb.co/zV31zD2j/photo1.jpg" alt="Photo 1">
+<img src="https://i.ibb.co/x8qzj1NJ/photo2.jpg" alt="Photo 2">
+<img src="https://i.ibb.co/LmybM8s/photo3.jpg" alt="Photo 3">
 </div>
 
 <!-- Right window with 3 photos -->
 <div class="window right">
-  <img src="https://i.ibb.co/5CjwbhC/photo4.jpg" alt="Photo 4">
-  <img src="https://i.ibb.co/RTph5NLX/photo5.jpg" alt="Photo 5">
-  <img src="https://i.ibb.co/b5dVf9bn/photo6.jpg" alt="Photo 6">
+<img src="https://i.ibb.co/5CjwbhC/photo4.jpg" alt="Photo 4">
+<img src="https://i.ibb.co/RTph5NLX/photo5.jpg" alt="Photo 5">
+<img src="https://i.ibb.co/b5dVf9bn/photo6.jpg" alt="Photo 6">
 </div>
 
 <!-- Blood drips -->
 <script>
-  const body = document.body;
-  const dripCount = 50; // more drips for effect
-  for(let i=0; i<dripCount; i++){
-    const drip = document.createElement('div');
-    drip.className = 'blood-drip';
-    drip.style.left = Math.random() * window.innerWidth + 'px';
-    drip.style.animationDuration = (3 + Math.random() * 2) + 's';
-    drip.style.width = (4 + Math.random()*6) + 'px';
-    drip.style.height = (20 + Math.random()*50) + 'px';
-    drip.style.top = Math.random() * -500 + 'px';
-    body.appendChild(drip);
-  }
+const body = document.body;
+const dripCount = 50; // more drips for effect
+for(let i=0; i<dripCount; i++){
+const drip = document.createElement('div');
+drip.className = 'blood-drip';
+drip.style.left = Math.random() * window.innerWidth + 'px';
+drip.style.animationDuration = (3 + Math.random() * 2) + 's';
+drip.style.width = (4 + Math.random()*6) + 'px';
+drip.style.height = (20 + Math.random()*50) + 'px';
+drip.style.top = Math.random() * -500 + 'px';
+body.appendChild(drip);
+}
 </script>
 
 </body>
